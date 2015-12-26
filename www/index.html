@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta http-equiv="Content-Security-Policy"/>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+        <script src="jquery-1.11.3.min.js"></script>
+          <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
+          <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+          <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">-->
+          <link rel="stylesheet" type="text/css" href="bootstrap-theme.min.css">
+          <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />-->
+          <link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.5.min.css">
+          <link rel="stylesheet" href="jquery.mobile-1.4.5.css">
+          
+         <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>-->
+                    
+        <title>Hello World</title>
+    </head>
+    <body>
+        <!-- login  -->
+       <div id="login" data-role="page">
+        <div role="main" class="ui-content">   
+        <div>
+          <div class="page-header"> 
+            <h1>Anfitriones<small> UFM </small></h1>
+          </div>
+          
+               <div class="btn-group btn-group-justified" role="group" aria-label="..." >
+                <div class="btn-group" role="group">
+                  <P ALIGN="center">
+                  <a href="#" class="btn btn-warning btn-lg" id="btnlogin">Login</a>
+                  <a href="#" class="btn btn-info btn-lg" id="btnregistrar">Registrar</a>
+                  </P>
+                </div>
+              </div>
+               </br>
+                    <div id="entrada" style="display:none;">
+                    <form method="post" id="formularioentra">
+                    <input type="text" class="form-control" placeholder="Usuario" id="user" name="Usuario">
+                    <input type="text" class="form-control" placeholder="password" id="pass" name="password">
+                     <P ALIGN="center"><a href="#" class="btn btn-success btn-lg" id="btnentrar">Entrar</a></P>
+                     <P ALIGN="center"><a href="#" class="btn btn-danger btn-lg" id="btncancel">cancelar</a></P>
+                    </form>
+                    </div>
+                    
+                    <div id="registrar" style="display:none;">
+                    <form method="post" id="formulario">
+                    <input type="text" class="form-control" placeholder="Correo" id="correoreg" name="Correo">
+                    <input type="text" class="form-control" placeholder="Nombre" id="nombrereg" name="Nombre">
+                    <input type="text" class="form-control" placeholder="Apellido" id="apreg" name="Apellido">
+                    <input type="text" class="form-control" placeholder="password" id="passreg" name="Passw">
+                    
+                     <P ALIGN="center"><a href="#" class="btn btn-success btn-lg" id="btnentrarreg">Enviar</a></P>
+                     <P ALIGN="center"><a href="#" class="btn btn-danger btn-lg" id="btncancelreg">cancelar</a></P>
+                    </form>
+                    </div>
+                    
+                    
+                    <div id="resultado"></div>
+                
+   
+               
+                    </br> </br>
+                    <P ALIGN="center"><IMG SRC="img/logo.jpg" WIDTH="250" HEIGHT="250" BORDER="2"></P>
+        </div>
+        </div>
+        </div>
+       
+       
+       <!-- principal  -->
+      <div id="pgprincipal" data-role="page" is="pgprincipal" class="panel panel-primary">
+        <div role="main" class="ui-content" is="content">
+            <a class="ui-btn" href="#login">Cerrar sesion</a>
+            
+            
+            <!--<P ALIGN="center"><IMG id="inicio" SRC="img/sig.jpg" WIDTH="350" HEIGHT="225" BORDER="2" ></P>-->
+            
+            <div>
+            <!--<button type="button" class="btn btn-success btn-lg" id="btnaumento">aumentar</button>-->
+            <a href="#" class="btn btn-success btn-lg" id="btnagreg">agregar nuevo registro</a>
+            </div>
+            
+            </br>
+            
+            <div>
+            <P ALIGN="center"><a href="#" class="btn btn-info btn-lg" id="btnver">Ver registros!</a></P>
+            </div>
+            
+            <div>
+            <div class="alert alert-warning" role="alert">Bebe en proceso</div> 
+             </div>
+            
+                <div class="progress">
+                  <div id="barra" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                  </div>
+                </div>
+                
+                
+            <div>
+            <input type="text" class="form-control" placeholder="Buscar contacto" id="nombrepersona">
+            <P ALIGN="left"><a href="#" class="btn btn-info btn-lg" id="btncontacto">buscar contacto</a></P>
+            </div>
+              
+      </div>
+      </div>
+      
+      
+      <!-- PAGINA 1  -->
+      <div id="pg1" data-role="page" is="pg1">
+        <div role="main" class="ui-content" is="content">
+            <a class="ui-btn" href="#pgmostrarreg">Atras</a>
+            </br>
+             <div>
+             <div class="alert alert-info" role="alert">Primer Mes!</div>  
+            <P ALIGN="center"><a href="#" class="btn btn-warning btn-lg" id="btnpg1">Refrescar valores</a></P>
+            
+    
+            
+            <div><ul id="lista1mes"></ul></div>
+        </div>
+      </div>
+    </div>
+       
+       
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script>
+        $(document).bind('mobileinit',function(){
+            $.mobile.pushStateEnabled = false;
+        });
+        </script>
+        <!--<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+        <script src="jquery.mobile-1.4.5.min.js"></script>
+                                                        
+        <!--<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>-->
+        <script src="jquery.mobile-1.4.5.js"></script>
+        <script type="text/javascript">
+            
+            var veri="no";
+            //boton elije login
+            $(document).on("click", "#btnlogin", function(evt) 
+            {
+            document.getElementById('registrar').style.display = 'none';
+            document.getElementById('entrada').style.display = 'block';
+            limpiarlogin();
+            });
+            //boton elije registrar
+            $(document).on("click", "#btnregistrar", function(evt) 
+            {
+            document.getElementById('entrada').style.display = 'none';
+            document.getElementById('registrar').style.display = 'block';
+            limpiarlogin();
+            });
+            //boton cancelar
+            $(document).on("click", "#btncancel", function(evt) 
+            {
+            document.getElementById('entrada').style.display = 'none';
+            limpiarlogin();
+            });
+            //boton cancelar en registro
+            $(document).on("click", "#btncancelreg", function(evt) 
+            {
+            document.getElementById('registrar').style.display = 'none';
+            limpiarlogin();
+            });
+            //boton enviar registro
+            $(document).on("click", "#btnentrarreg", function(evt) 
+            {
+            var url = "http://anfitrionesufm.freevar.com/index.php";  
+	    $.ajax({
+	           type: "POST",
+	           url: url,
+	           data:  $("#formulario").serialize(),
+	    });
+	    alert('Datos enviados');
+	    limpiarlogin();
+	    return false; // Evitar ejecutar el submit del formulario.
+            });
+            //boton login entrar
+            $(document).on("click", "#btnentrar", function(evt) 
+            {
+            var url = "http://anfitrionesufm.freevar.com/login.php";  
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: $("#formularioentra").serialize(),
+                beforeSend:function(){$("#resultado").html("espere...");},
+               // success: function(response){$("#resultado").html(response);}
+               success:function(response){
+                        //$("#resultado").html(response);
+                        veri=""+response;
+                        if (veri=="si") {
+                            alert("acceso concedido");
+                            $(location).attr('href', "#pgprincipal");
+                        }else{
+                            alert("acceso denegado");
+                            veri="no";
+                        }
+                        }
+                });
+            alert('Datos enviados');
+	    limpiarlogin();
+	    return false;
+        
+            });
+            
+            
+
+            function limpiarlogin(){
+            $('#user').val("");
+            $('#pass').val("");
+            $('#nombrereg').val("");
+            $('#apreg').val("");
+            $('#passreg').val("");
+            $('#correoreg').val("");
+            $('#resultado').empty();
+            }
+            
+            
+            //leer datos de la bd
+             function objetoAjax(){
+                    var xmlhttp=false;
+                    try {
+                           xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch (e) {
+                           try {
+                              xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                           } catch (E) {
+                                   xmlhttp = false;
+                           }
+                    }
+                    if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+                           xmlhttp = new XMLHttpRequest();
+                    }
+                    return xmlhttp;
+            }
+            function MostrarConsulta(datos){
+                    divResultado = document.getElementById('resultado');
+                    ajax=objetoAjax();
+                    ajax.open("GET", datos);
+                    ajax.onreadystatechange=function() {
+                           if (ajax.readyState==4) {
+                                   divResultado.innerHTML = ajax.responseText;
+                           }
+                    }
+                    ajax.send(null);
+            }
+            
+            
+            
+            
+            
+        </script>
+    </body>
+</html>
